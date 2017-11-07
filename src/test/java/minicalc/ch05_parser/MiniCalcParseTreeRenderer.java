@@ -1,4 +1,4 @@
-package minicalc.ch05;
+package minicalc.ch05_parser;
 
 import org.antlr.v4.runtime.Vocabulary;
 import org.minicalc.MiniCalcParser;

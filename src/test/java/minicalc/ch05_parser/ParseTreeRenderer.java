@@ -1,9 +1,9 @@
-package minicalc.ch05;
+package minicalc.ch05_parser;
 
 import java.io.IOException;
-import static minicalc.ch04.MiniCalcTestUtils.parseCode;
-import static minicalc.ch04.MiniCalcTestUtils.readSourceFile;
-import static minicalc.ch05.ParseTreeElement.toParseTree;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.parseCode;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.readSourceFile;
+import static minicalc.ch05_parser.ParseTreeElement.toParseTree;
 import org.antlr.v4.runtime.Vocabulary;
 
 public abstract class ParseTreeRenderer  {

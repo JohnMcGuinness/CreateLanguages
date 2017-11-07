@@ -1,9 +1,9 @@
-package minicalc.ch04;
+package minicalc.ch04_lexer;
 
 import java.io.IOException;
 import java.text.MessageFormat;
-import static minicalc.ch04.MiniCalcTestUtils.lexerForCode;
-import static minicalc.ch04.MiniCalcTestUtils.readSourceFile;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.lexerForCode;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.readSourceFile;
 import org.antlr.v4.runtime.Token;
 import org.minicalc.MiniCalcLexer;
 

@@ -1,4 +1,4 @@
-package minicalc.ch04;
+package minicalc.ch04_lexer;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

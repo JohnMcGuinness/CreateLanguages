@@ -1,4 +1,4 @@
-package minicalc.ch05;
+package minicalc.ch05_parser;
 
 import java.util.LinkedList;
 import org.antlr.v4.runtime.ParserRuleContext;

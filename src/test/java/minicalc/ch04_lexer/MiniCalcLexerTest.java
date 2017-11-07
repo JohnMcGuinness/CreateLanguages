@@ -1,9 +1,9 @@
-package minicalc.ch04;
+package minicalc.ch04_lexer;
 
-import static minicalc.ch04.MiniCalcTestUtils.lexerForCode;
-import static minicalc.ch04.MiniCalcTestUtils.listOf;
-import static minicalc.ch04.MiniCalcTestUtils.tokensContent;
-import static minicalc.ch04.MiniCalcTestUtils.tokensNames;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.lexerForCode;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.listOf;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.tokensContent;
+import static minicalc.ch04_lexer.MiniCalcTestUtils.tokensNames;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 

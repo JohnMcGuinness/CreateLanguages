@@ -1,4 +1,4 @@
-package minicalc.ch05;
+package minicalc.ch05_parser;
 
 import java.io.IOException;
 
