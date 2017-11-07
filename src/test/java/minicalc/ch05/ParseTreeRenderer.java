@@ -8,9 +8,18 @@ import org.antlr.v4.runtime.Vocabulary;
 
 public abstract class ParseTreeRenderer  {
 
-    public abstract Vocabulary vocabulary();
+    protected abstract Vocabulary vocabulary();
 
-    public String render(String file) throws IOException {
+    public static ParseTreeRenderer forVocabulary(Vocabulary vocabulary) {
+        return new ParseTreeRenderer() {
+            @Override
+            public Vocabulary vocabulary() {
+                return vocabulary;
+            }
+        };
+    }
+
+    public final String render(String file) throws IOException {
          return toParseTree(parseCode(readSourceFile(file)),vocabulary()).multiLineString("");
     }
 }
