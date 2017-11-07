@@ -14,67 +14,70 @@ import org.antlr.v4.runtime.Token;
 import org.minicalc.MiniCalcLexer;
 import org.minicalc.MiniCalcParser;
 
-public class MiniCalcTestUtils
-{
-	private MiniCalcTestUtils(){}
+public class MiniCalcTestUtils {
 
-	public static MiniCalcLexer lexerForCode(String code) {
-		return new MiniCalcLexer(CharStreams.fromString(code));
-	}
+    private MiniCalcTestUtils() {
+    }
 
-	public static String readSourceFile(String path) throws FileNotFoundException, IOException {
-		return Files.readAllLines(Paths.get(path)).stream().collect(Collectors.joining(System.lineSeparator()));
-	}
+    public static MiniCalcLexer lexerForCode(String code) {
+        return new MiniCalcLexer(CharStreams.fromString(code));
+    }
 
-	public static List<String> tokensContent(MiniCalcLexer lexer) {
+    public static String readSourceFile(String path) throws FileNotFoundException, IOException {
+        return Files.readAllLines(Paths.get(path)).stream().collect(Collectors.joining(System.lineSeparator()));
+    }
 
-		LinkedList<String> tokens = new LinkedList<>();
+    public static List<String> tokensContent(MiniCalcLexer lexer) {
 
-		Token t = null;
+        final LinkedList<String> tokens = new LinkedList<>();
 
-		do {
+        Token t = null;
 
-			t = lexer.nextToken();
+        do {
 
-			if( t.getType() == -1) {
-				tokens.add("EOF");
-			}
-			else if( t.getType() != MiniCalcLexer.WS) {
-				tokens.add(lexer.getText());
-			}
+            t = lexer.nextToken();
 
-		} while ( t.getType() != -1);
+            if (t.getType() == -1) {
+                tokens.add("EOF");
+            }
+            else if (t.getType() != MiniCalcLexer.WS) {
+                tokens.add(lexer.getText());
+            }
 
-		return tokens;
-	}
+        }
+        while (t.getType() != -1);
 
-	public static List<String> tokensNames(MiniCalcLexer lexer) {
+        return tokens;
+    }
 
-		LinkedList<String> tokens = new LinkedList<>();
+    public static List<String> tokensNames(MiniCalcLexer lexer) {
 
-		Token t = null;
+        LinkedList<String> tokens = new LinkedList<>();
 
-		do {
+        Token t = null;
 
-			t = lexer.nextToken();
+        do {
 
-			if( t.getType() == -1) {
-				tokens.add("EOF");
-			}
-			else if( t.getType() != MiniCalcLexer.WS) {
-				tokens.add(MiniCalcLexer.VOCABULARY.getSymbolicName(t.getType()));
-			}
+            t = lexer.nextToken();
 
-		} while ( t.getType() != -1);
+            if (t.getType() == -1) {
+                tokens.add("EOF");
+            }
+            else if (t.getType() != MiniCalcLexer.WS) {
+                tokens.add(MiniCalcLexer.VOCABULARY.getSymbolicName(t.getType()));
+            }
 
-		return tokens;
-	}
+        }
+        while (t.getType() != -1);
 
-	public static MiniCalcParser.MiniCalcFileContext parseCode(String code) {
-		return new MiniCalcParser(new CommonTokenStream(lexerForCode(code))).miniCalcFile();
-	}
+        return tokens;
+    }
 
-	public static List<String> listOf(String... strings) {
-		return Arrays.asList(strings);
-	}
+    public static MiniCalcParser.MiniCalcFileContext parseCode(String code) {
+        return new MiniCalcParser(new CommonTokenStream(lexerForCode(code))).miniCalcFile();
+    }
+
+    public static List<String> listOf(String... strings) {
+        return Arrays.asList(strings);
+    }
 }
