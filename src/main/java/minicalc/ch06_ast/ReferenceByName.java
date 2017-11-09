@@ -1,14 +1,19 @@
 package minicalc.ch06_ast;
 
 import java.util.List;
+import java.util.Objects;
 
 public final class ReferenceByName<N extends Named>  {
 
     public String name;
     public N referenced;
 
+    public static <N extends Named> ReferenceByName<N> referenceByName(String name, N referenced) {
+        return new ReferenceByName(name, referenced);
+    }
+
     private ReferenceByName(String name, N referenced) {
-        this.name = name;
+        this.name = Objects.requireNonNull(name, "name is required");
         this.referenced = referenced;
     }
 
