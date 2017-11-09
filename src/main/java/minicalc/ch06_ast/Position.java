@@ -4,8 +4,8 @@ import static minicalc.ch06_ast.Point.Point;
 
 public final class Position {
 
-    public final Point start;
-    public final Point end;
+    private final Point start;
+    private final Point end;
 
     public static Position Position(int startLine, int startCol, int endLine, int endCol) {
         return Position(Point(startLine, startCol), Point(endLine, endCol));
@@ -34,5 +34,13 @@ public final class Position {
 
     public int length(String code) {
         return end.offset(code) - start.offset(code);
+    }
+
+    public Point start() {
+        return start;
+    }
+
+    public Point end() {
+        return end;
     }
 }

@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 
 public final class Point  {
 
-    public int line;
-    public int column;
+    private int line;
+    private int column;
 
     public static Point Point(int line, int column) {
         return new Point(line, column);
@@ -38,5 +38,13 @@ public final class Point  {
     @Override
     public String toString() {
         return MessageFormat.format("Line {0}, Column {1}", line, column);
+    }
+
+    public int line() {
+        return line;
+    }
+
+    public int column() {
+        return column;
     }
 }

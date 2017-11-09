@@ -5,8 +5,8 @@ import minicalc.ch06_ast.Position;
 
 public final class DecLit implements Expression {
 
-    public final String value;
-    public final Position position;
+    private final String value;
+    private final Position position;
 
     public static DecLit DecLit(String value, Position position) {
         return new DecLit(value, position);

@@ -5,10 +5,10 @@ import java.util.Objects;
 
 public final class ReferenceByName<N extends Named>  {
 
-    public String name;
-    public N referenced;
+    private String name;
+    private N referenced;
 
-    public static <N extends Named> ReferenceByName<N> referenceByName(String name, N referenced) {
+    public static <N extends Named> ReferenceByName<N> ReferenceByName(String name, N referenced) {
         return new ReferenceByName(name, referenced);
     }
 
@@ -26,6 +26,14 @@ public final class ReferenceByName<N extends Named>  {
 
         return referenced != null;
 
+    }
+
+    public String name() {
+        return name;
+    }
+
+    public N referenced() {
+        return referenced;
     }
 
     @Override

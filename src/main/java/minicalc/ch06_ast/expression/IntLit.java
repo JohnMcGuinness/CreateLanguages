@@ -5,8 +5,8 @@ import minicalc.ch06_ast.Position;
 
 public final class IntLit implements Expression {
 
-    public final String value;
-    public final Position position;
+    private final String value;
+    private final Position position;
 
     public static IntLit IntLit(String value, Position position) {
         return new IntLit(value, position);
