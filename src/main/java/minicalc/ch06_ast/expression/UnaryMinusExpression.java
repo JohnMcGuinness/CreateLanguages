@@ -8,7 +8,11 @@ public final class UnaryMinusExpression implements Expression {
     private final Position position;
     private final Expression expression;
 
-    public UnaryMinusExpression(Expression expression, Position position) {
+    public static UnaryMinusExpression UnaryMinusExpression(Expression expression, Position position) {
+        return new UnaryMinusExpression(expression, position);
+    }
+
+    private UnaryMinusExpression(Expression expression, Position position) {
         this.expression = expression;
         this.position = position;
     }

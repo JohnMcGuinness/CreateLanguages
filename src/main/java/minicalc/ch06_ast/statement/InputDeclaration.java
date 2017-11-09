@@ -9,7 +9,7 @@ public final class InputDeclaration implements ValueDeclaration {
     private final String name;
     private final Position position;
 
-    public InputDeclaration VarDeclaration(Type type, String name, Position position) {
+    public static InputDeclaration InputDeclaration(Type type, String name, Position position) {
         return new InputDeclaration(type, name, position);
     }
 

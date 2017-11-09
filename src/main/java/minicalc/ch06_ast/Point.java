@@ -10,7 +10,7 @@ public final class Point  {
     public int line;
     public int column;
 
-    public static Point point(int line, int column) {
+    public static Point Point(int line, int column) {
         return new Point(line, column);
     }
 

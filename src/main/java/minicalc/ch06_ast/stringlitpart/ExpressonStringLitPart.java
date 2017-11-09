@@ -8,7 +8,7 @@ public final class ExpressonStringLitPart implements StringLitPart {
     private final Expression expression;
     private final Position position;
 
-    public static ExpressonStringLitPart ConstantStringLitPart(Expression expression, Position position) {
+    public static ExpressonStringLitPart ExpressonStringLitPart(Expression expression, Position position) {
         return new ExpressonStringLitPart(expression, position);
     }
 

@@ -10,6 +10,10 @@ public final class MiniCalcFile implements Node {
     private final List<Statement> statements;
     private final Position position;
 
+    public static MiniCalcFile MiniCalcFile(List<Statement> statements, Position position) {
+        return new MiniCalcFile(statements, position);
+    }
+
     public MiniCalcFile(List<Statement> statements, Position position) {
         this.position = position;
         this.statements = statements;

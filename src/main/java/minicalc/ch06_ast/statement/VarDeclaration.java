@@ -9,7 +9,7 @@ public final class VarDeclaration implements ValueDeclaration {
     private final String name;
     private final Position position;
 
-    public VarDeclaration VarDeclaration(Expression value, String name, Position position) {
+    public static VarDeclaration VarDeclaration(Expression value, String name, Position position) {
         return new VarDeclaration(value, name, position);
     }
 

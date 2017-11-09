@@ -6,6 +6,10 @@ public final class StringType implements Type {
 
     private final Position position;
 
+    public static StringType StringType(Position position) {
+        return new StringType(position);
+    }
+    
     private StringType(Position position) {
         this.position = position;
     }

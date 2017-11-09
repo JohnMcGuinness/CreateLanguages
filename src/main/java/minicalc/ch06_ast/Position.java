@@ -1,15 +1,17 @@
 package minicalc.ch06_ast;
 
+import static minicalc.ch06_ast.Point.Point;
+
 public final class Position {
 
     public final Point start;
     public final Point end;
 
-    public static Position position(int startLine, int startCol, int endLine, int endCol) {
-        return position(Point.point(startLine, startCol), Point.point(endLine, endCol));
+    public static Position Position(int startLine, int startCol, int endLine, int endCol) {
+        return Position(Point(startLine, startCol), Point(endLine, endCol));
     }
 
-    public static Position position(Point start, Point end) {
+    public static Position Position(Point start, Point end) {
         return new Position(start, end);
     }
 
